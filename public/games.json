@@ -4,6 +4,7 @@
         "gameName": "Battle for Wesnoth",
         "firstReleaseYear": 2005,
         "genre": "Strategy",
+        "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://github.com/wesnoth/wesnoth"
     },
     {
@@ -11,6 +12,7 @@
         "gameName": "0 A.D.",
         "firstReleaseYear": 2005,
         "genre": "Strategy",
+        "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://trac.wildfiregames.com/browser/ps/trunk/"
     },
     {
@@ -18,6 +20,7 @@
         "gameName": "Minetest",
         "firstReleaseYear": 2010,
         "genre": "Sandbox",
+        "codeLicense": "LGPL-2.1-or-later",
         "sourceLink": "https://github.com/minetest/minetest"
     }
 ]

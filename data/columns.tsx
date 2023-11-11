@@ -2,7 +2,7 @@
 import { Column, CellProps } from "react-table";
 
 export interface IHref {
-    text: string,
+    txt: string,
     link: string
 }
 
@@ -11,6 +11,7 @@ export interface IGameData {
     gameName: string,
     firstReleaseYear: number,
     genre: string,
+    codeLicense: string,
     sourceLink: string
 };
 
@@ -28,12 +29,16 @@ export const columns: Column<IGameData>[] = [
       accessor: 'firstReleaseYear',
     },
     {
-        Header: 'Genre',
+        Header: 'Genre(s)',
         accessor: 'genre',
+    },
+    {
+        Header: 'Code license',
+        accessor: 'codeLicense'
     },
     {
         Header: 'Repository',
         accessor: 'sourceLink',
-        Cell: ({ value }) => <a href={value} key={Math.random()}>source</a>
+        Cell: ({ value }) => <a href={value}>source</a>
     },    
   ];
