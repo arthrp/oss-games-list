@@ -8,9 +8,9 @@ export interface IHref {
 
 export interface IGameData {
     id: number,
-    gameName: string,
+    game: IHref,
     firstReleaseYear: number,
-    genre: string,
+    genres: string[],
     codeLicense: string,
     sourceLink: string
 };
@@ -21,8 +21,9 @@ export const columns: Column<IGameData>[] = [
       accessor: 'id',
     },
     {
-      Header: 'Name',
-      accessor: 'gameName',
+      Header: 'Game',
+      accessor: 'game',
+      Cell: ({value}) => <a href={value.link}>{value.txt}</a>
     },
     {
       Header: 'First release',
@@ -30,7 +31,8 @@ export const columns: Column<IGameData>[] = [
     },
     {
         Header: 'Genre(s)',
-        accessor: 'genre',
+        accessor: 'genres',
+        Cell: ({ value }) => <>{value.join(', ')}</>
     },
     {
         Header: 'Code license',

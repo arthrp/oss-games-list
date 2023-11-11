@@ -1,26 +1,34 @@
 [
     {
         "id": 1,
-        "gameName": "Battle for Wesnoth",
+        "game": {"link": "https://www.wesnoth.org/", "txt":"Battle for Wesnoth"},
         "firstReleaseYear": 2005,
-        "genre": "Strategy",
+        "genres": ["Strategy", "TBS"],
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://github.com/wesnoth/wesnoth"
     },
     {
         "id": 2,
-        "gameName": "0 A.D.",
+        "game": {"link": "https://play0ad.com/", "txt":"0 A.D."},
         "firstReleaseYear": 2005,
-        "genre": "Strategy",
+        "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://trac.wildfiregames.com/browser/ps/trunk/"
     },
     {
         "id": 3,
-        "gameName": "Minetest",
+        "game": {"link": "https://www.minetest.net/", "txt":"Minetest"},
         "firstReleaseYear": 2010,
-        "genre": "Sandbox",
+        "genres": ["Sandbox"],
         "codeLicense": "LGPL-2.1-or-later",
         "sourceLink": "https://github.com/minetest/minetest"
+    },
+    {
+        "id": 4,
+        "game": {"link": "https://www.nethack.org/", "txt":"Nethack"},
+        "firstReleaseYear": 1987,
+        "genres": ["Roguelike", "RPG"],
+        "codeLicense": "NetHack General Public License",
+        "sourceLink": "https://github.com/NetHack/NetHack"
     }
 ]
