@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "gameName": "Battle for Wesnoth",
+        "firstReleaseYear": 2005,
+        "genre": "Strategy",
+        "sourceLink": "https://github.com/wesnoth/wesnoth"
+    },
+    {
+        "id": 2,
+        "gameName": "0 A.D.",
+        "firstReleaseYear": 2005,
+        "genre": "Strategy",
+        "sourceLink": "https://trac.wildfiregames.com/browser/ps/trunk/"
+    },
+    {
+        "id": 3,
+        "gameName": "Minetest",
+        "firstReleaseYear": 2010,
+        "genre": "Sandbox",
+        "sourceLink": "https://github.com/minetest/minetest"
+    }
+]
