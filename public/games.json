@@ -2,33 +2,37 @@
     {
         "id": 1,
         "game": {"link": "https://www.wesnoth.org/", "txt":"Battle for Wesnoth"},
-        "firstReleaseYear": 2005,
+        "firstReleaseDate": "2005-10-02",
         "genres": ["Strategy", "TBS"],
         "codeLicense": "GPL-2.0-or-later",
-        "sourceLink": "https://github.com/wesnoth/wesnoth"
+        "sourceLink": "https://github.com/wesnoth/wesnoth",
+        "langs": ["C++", "Lua", "Python"]
     },
     {
         "id": 2,
         "game": {"link": "https://play0ad.com/", "txt":"0 A.D."},
-        "firstReleaseYear": 2005,
+        "firstReleaseDate": "2010-04-01",
         "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-2.0-or-later",
-        "sourceLink": "https://trac.wildfiregames.com/browser/ps/trunk/"
+        "sourceLink": "https://trac.wildfiregames.com/browser/ps/trunk/",
+        "langs": ["C++"]
     },
     {
         "id": 3,
         "game": {"link": "https://www.minetest.net/", "txt":"Minetest"},
-        "firstReleaseYear": 2010,
+        "firstReleaseDate": "2010-11-02",
         "genres": ["Sandbox"],
         "codeLicense": "LGPL-2.1-or-later",
-        "sourceLink": "https://github.com/minetest/minetest"
+        "sourceLink": "https://github.com/minetest/minetest",
+        "langs": ["C++", "Lua"]
     },
     {
         "id": 4,
         "game": {"link": "https://www.nethack.org/", "txt":"Nethack"},
-        "firstReleaseYear": 1987,
+        "firstReleaseDate": "1987-07-28",
         "genres": ["Roguelike", "RPG"],
         "codeLicense": "NetHack General Public License",
-        "sourceLink": "https://github.com/NetHack/NetHack"
+        "sourceLink": "https://github.com/NetHack/NetHack",
+        "langs": ["C", "Lua"]
     }
 ]
