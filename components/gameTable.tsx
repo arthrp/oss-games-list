@@ -1,7 +1,7 @@
 'use client';
 import { IGameData } from '@/data/columns';
 import React from 'react';
-import { Column, useTable } from 'react-table';
+import { Column, TableSortByToggleProps, useSortBy, useTable } from 'react-table';
 
 
 type IGameTableProps = {
@@ -9,14 +9,14 @@ type IGameTableProps = {
   columns: Column<IGameData>[];
 };
 
-const GameTable: React.FC<IGameTableProps> = ({ data, columns }) => {
+const GameTable = ({ data, columns } : { columns: any, data: IGameData[] }) => {
     const {
       getTableProps,
       getTableBodyProps,
       headerGroups,
       rows,
       prepareRow,
-    } = useTable({ columns, data });
+    } = useTable({ columns, data }, useSortBy);
   
     return (
       <table {...getTableProps()} className="table">
@@ -24,8 +24,11 @@ const GameTable: React.FC<IGameTableProps> = ({ data, columns }) => {
           {headerGroups.map((headerGroup, i) => (
             <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id || i} >
               {headerGroup.headers.map(column => (
-                <th {...column.getHeaderProps()} key={column.id}>
+                <th {...column.getHeaderProps((column.getSortByToggleProps as () => TableSortByToggleProps)())} key={column.id}>
                   {column.render('Header')}
+                  <span>
+                {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+                  </span>
                 </th>
               ))}
             </tr>

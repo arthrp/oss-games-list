@@ -1,6 +1,6 @@
 'use client';
 import format from "date-fns/format";
-import { Column, CellProps } from "react-table";
+import { Column, CellProps, UseSortByColumnOptions } from "react-table";
 
 export interface IHref {
     txt: string,
@@ -17,7 +17,9 @@ export interface IGameData {
     langs: string[]
 };
 
-export const columns: Column<IGameData>[] = [
+type ExtendedColumn = Column<IGameData> & UseSortByColumnOptions<IGameData>;
+
+export const columns: ExtendedColumn[] = [
     {
       Header: 'ID',
       accessor: 'id',
@@ -44,11 +46,13 @@ export const columns: Column<IGameData>[] = [
     {
         Header: 'Repository',
         accessor: 'sourceLink',
-        Cell: ({ value }) => <a href={value}>source</a>
+        Cell: ({ value }) => <a href={value}>source</a>,
+        disableSortBy: true
     },
     {
       Header: 'Languages',
       accessor: 'langs',
-      Cell: ({ value }) => <>{value.join(', ')}</>
+      Cell: ({ value }) => <>{value.join(', ')}</>,
+      disableSortBy: true
     },    
   ];
