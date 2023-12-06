@@ -1,6 +1,6 @@
 'use client';
 import format from "date-fns/format";
-import { Column, CellProps, UseSortByColumnOptions } from "react-table";
+import { Column, CellProps, UseSortByColumnOptions, Row } from "react-table";
 
 export interface IHref {
     txt: string,
@@ -19,6 +19,13 @@ export interface IGameData {
 
 type ExtendedColumn = Column<IGameData> & UseSortByColumnOptions<IGameData>;
 
+const dateSorter = (rowA: Row<IGameData>, rowB: Row<IGameData>, columnId: string) => {
+  const dateA = new Date(rowA.values[columnId]);
+  const dateB = new Date(rowB.values[columnId]);
+
+  return dateA.getTime() - dateB.getTime();
+}
+
 export const columns: ExtendedColumn[] = [
     {
       Header: 'ID',
@@ -32,7 +39,8 @@ export const columns: ExtendedColumn[] = [
     {
       Header: 'First release date',
       accessor: 'firstReleaseDate',
-      Cell: ({ value }: { value: Date }) => <>{format(value, "MMMM dd, yyyy")}</>
+      Cell: ({ value }: { value: Date }) => <>{format(value, "MMMM dd, yyyy")}</>,
+      sortType: dateSorter
     },
     {
         Header: 'Genre(s)',
