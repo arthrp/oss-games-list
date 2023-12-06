@@ -1,7 +1,7 @@
 'use client';
 import { IGameData } from '@/data/columns';
 import React from 'react';
-import { Column, TableSortByToggleProps, useSortBy, useTable, ColumnInstance } from 'react-table';
+import { Column, useSortBy, useTable, ColumnInstance } from 'react-table';
 
 
 type IGameTableProps = {
@@ -9,7 +9,7 @@ type IGameTableProps = {
   columns: Column<IGameData>[];
 };
 
-const GameTable = ({ data, columns } : { columns: any, data: IGameData[] }) => {
+const GameTable = ({ data, columns } : { columns: Column<IGameData>[], data: IGameData[] }) => {
     const {
       getTableProps,
       getTableBodyProps,
@@ -27,7 +27,7 @@ const GameTable = ({ data, columns } : { columns: any, data: IGameData[] }) => {
                  <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.id}>
                   {column.render('Header')}
                   <span>
-                {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+                {column.disableSortBy ? ' ' : (column.isSorted ? (column.isSortedDesc ? ' ⇊' : ' ⇈') : ' ⇅')}
                   </span>
                 </th>
               ))}
