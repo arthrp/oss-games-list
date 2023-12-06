@@ -26,6 +26,13 @@ const dateSorter = (rowA: Row<IGameData>, rowB: Row<IGameData>, columnId: string
   return dateA.getTime() - dateB.getTime();
 }
 
+const arraySorter = (rowA: Row<IGameData>, rowB: Row<IGameData>, columnId: string) => {
+  const arrA = rowA.values[columnId] as string[];
+  const arrB = rowB.values[columnId] as string[];
+
+  return arrA[0].localeCompare(arrB[0]);
+}
+
 export const columns: ExtendedColumn[] = [
     {
       Header: 'ID',
@@ -45,7 +52,8 @@ export const columns: ExtendedColumn[] = [
     {
         Header: 'Genre(s)',
         accessor: 'genres',
-        Cell: ({ value }) => <>{value.join(', ')}</>
+        Cell: ({ value }) => <>{value.join(', ')}</>,
+        sortType: arraySorter
     },
     {
         Header: 'Code license',
