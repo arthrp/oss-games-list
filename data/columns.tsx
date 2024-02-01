@@ -30,16 +30,14 @@ const arraySorter = (rowA: Row<IGameData>, rowB: Row<IGameData>, columnId: strin
   const arrA = rowA.values[columnId] as string[];
   const arrB = rowB.values[columnId] as string[];
 
-  return arrA[0].localeCompare(arrB[0]);
+  return arrA[0].localeCompare(arrB[0], 'en');
 }
 
 const caseInsensitiveAlphabeticalSorter = (rowA: Row<IGameData>, rowB: Row<IGameData>, columnId: string) => {
-  const valA = rowA.values[columnId].txt.toLowerCase();
-  const valB = rowB.values[columnId].txt.toLowerCase();
+  const valA = rowA.values[columnId].txt.toLowerCase() as string;
+  const valB = rowB.values[columnId].txt.toLowerCase() as string;
 
-  if (valA > valB) return 1;
-  if (valB > valA) return -1;
-  return 0;
+  return valA.localeCompare(valB, 'en');
 };
 
 export const columns: ExtendedColumn[] = [
