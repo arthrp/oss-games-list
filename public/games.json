@@ -34,5 +34,14 @@
         "codeLicense": "NetHack General Public License",
         "sourceLink": "https://github.com/NetHack/NetHack",
         "langs": ["C", "Lua"]
+    },
+    {
+        "id": 5,
+        "game": {"link": "https://www.freeciv.org/", "txt":"FreeCiv"},
+        "firstReleaseDate": "1996-01-05",
+        "genres": ["Strategy", "TBS"],
+        "codeLicense": "GPL-2.0-or-later",
+        "sourceLink": "https://github.com/freeciv/freeciv",
+        "langs": ["C", "C++", "Lua"]
     }
 ]

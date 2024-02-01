@@ -33,6 +33,15 @@ const arraySorter = (rowA: Row<IGameData>, rowB: Row<IGameData>, columnId: strin
   return arrA[0].localeCompare(arrB[0]);
 }
 
+const caseInsensitiveAlphabeticalSorter = (rowA: Row<IGameData>, rowB: Row<IGameData>, columnId: string) => {
+  const valA = rowA.values[columnId].txt.toLowerCase();
+  const valB = rowB.values[columnId].txt.toLowerCase();
+
+  if (valA > valB) return 1;
+  if (valB > valA) return -1;
+  return 0;
+};
+
 export const columns: ExtendedColumn[] = [
     {
       Header: 'ID',
@@ -41,7 +50,8 @@ export const columns: ExtendedColumn[] = [
     {
       Header: 'Game',
       accessor: 'game',
-      Cell: ({value}) => <a href={value.link}>{value.txt}</a>
+      Cell: ({value}) => <a href={value.link}>{value.txt}</a>,
+      sortType: caseInsensitiveAlphabeticalSorter
     },
     {
       Header: 'First release date',
