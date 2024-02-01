@@ -43,5 +43,32 @@
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://github.com/freeciv/freeciv",
         "langs": ["C", "C++", "Lua"]
+    },
+    {
+        "id": 6,
+        "game": {"link": "https://www.gnu.org/software/chess/", "txt":"GNU Chess"},
+        "firstReleaseDate": "1984-01-01",
+        "genres": ["Strategy", "Chess"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://git.savannah.gnu.org/cgit/chess.git",
+        "langs": ["C++"]
+    },
+    {
+        "id": 7,
+        "game": {"link": "https://supertuxkart.net", "txt":"SuperTuxKart"},
+        "firstReleaseDate": "2007-08-06",
+        "genres": ["Racing", "Kart racing"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://github.com/supertuxkart/stk-code",
+        "langs": ["C++", "C"]
+    },
+    {
+        "id": 8,
+        "game": {"link": "https://freeorion.org/index.php/Main_Page", "txt":"FreeOrion"},
+        "firstReleaseDate": "2004-03-07",
+        "genres": ["Strategy", "TBS"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/freeorion/freeorion",
+        "langs": ["C++", "Python"]
     }
 ]
