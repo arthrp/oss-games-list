@@ -70,5 +70,23 @@
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/freeorion/freeorion",
         "langs": ["C++", "Python"]
+    },
+    {
+        "id": 9,
+        "game": {"link": "https://louisnivrat.itch.io/elemental-sorcerer", "txt":"Elemental Sorcerer"},
+        "firstReleaseDate": "2022-08-29",
+        "genres": ["Platformer", "Metroidvania"],
+        "codeLicense": "MIT",
+        "sourceLink": "https://github.com/Louis-Tarvin/Elemental-Sorcerer",
+        "langs": ["Rust"]
+    },
+    {
+        "id": 10,
+        "game": {"link": "https://www.freecol.org/", "txt":"FreeCol"},
+        "firstReleaseDate": "2003-01-02",
+        "genres": ["Strategy", "TBS"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/FreeCol/freecol",
+        "langs": ["Java"]
     }
 ]
