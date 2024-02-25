@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <h1 className="text-center mt-5">List of open-source games</h1>
+      <h1 className="mt-5">List of open-source games</h1>
       <GameTable columns={columns} data={gameData} />
     </div>
     );
