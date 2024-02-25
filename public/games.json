@@ -88,5 +88,23 @@
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/FreeCol/freecol",
         "langs": ["Java"]
+    },
+    {
+        "id": 11,
+        "game": {"link": "https://globulation2.org/wiki/Main_Page", "txt":"Globulation 2"},
+        "firstReleaseDate": "2009-02-02",
+        "genres": ["Strategy", "RTS"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://bitbucket.org/giszmo/glob2/src/master/",
+        "langs": ["C++"]
+    },
+    {
+        "id": 12,
+        "game": {"link": "https://www.openttd.org/", "txt":"OpenTTD"},
+        "firstReleaseDate": "2004-03-06",
+        "genres": ["Business sim", "Tycoon"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/OpenTTD/OpenTTD",
+        "langs": ["C++","C"]
     }
 ]
