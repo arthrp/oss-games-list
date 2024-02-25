@@ -13,7 +13,7 @@ const GameDetailsModal: React.FC<ModalProps> = ({ isOpen, onClose, title, childr
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-4 rounded-lg shadow-lg">
+      <div className="bg-white p-4 rounded-lg shadow-lg min-w-[300px]">
         <h3><a href={homepage}>{title}</a></h3>
         {children}
         <button onClick={onClose} className="mt-4 bg-red-500 text-white py-2 px-4 rounded">

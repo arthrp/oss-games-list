@@ -11,6 +11,12 @@ export default function About() {
                 <li>Unique in some regard - just another clone of Pong won&lsquo;t do. This naturally doesn&lsquo;t apply to remakes of complex games such as OpenTTD.</li>
                 <li>Have some sort of recognition - be featured in a game jam, distributed in a popular linux distro, etc.</li>
             </ol>
+
+            <p>Other projects dedicated to open-source games:</p>
+            <ul className="list-disc">
+                <li><a href="https://libregamewiki.org/Main_Page">LibreGameWiki</a></li>
+                <li><a href="https://github.com/michelpereira/awesome-open-source-games">Collection of OSS games on Github</a></li>
+            </ul>
         </div>
     );
 }
