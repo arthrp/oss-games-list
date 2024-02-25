@@ -1,15 +1,63 @@
 'use client';
-import { IGameData } from '@/data/columns';
-import React from 'react';
+import { ExtendedColumn, IGameData } from '@/data/columns';
+import React, { useState } from 'react';
 import { Column, useSortBy, useTable, ColumnInstance } from 'react-table';
+import GameDetailsModal from './gameDetailsModal';
+import format from "date-fns/format";
+import { arraySorter, caseInsensitiveAlphabeticalSorter, dateSorter } from '@/helpers/sorters';
 
+const GameTable = ({ data } : {  data: IGameData[] }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [title, setTitle] = useState("");
+  const [homepage, setHomepage] = useState("");
 
-type IGameTableProps = {
-  data: IGameData[];
-  columns: Column<IGameData>[];
-};
+  const columns: ExtendedColumn[] = React.useMemo(() => [
+    {
+      Header: 'ID',
+      accessor: 'id',
+    },
+    {
+      Header: 'Game',
+      accessor: 'game',
+      Cell: ({value}) => <a href="#" onClick={(e) => { 
+        e.preventDefault();
+        setIsModalOpen(true);
+        setTitle(value.txt);
+        setHomepage(value.link);
+       }}>{value.txt}</a>,
+      sortType: caseInsensitiveAlphabeticalSorter
+    },
+    {
+      Header: 'First release date',
+      accessor: 'firstReleaseDate',
+      Cell: ({ value }: { value: Date }) => <>{format(value, "MMMM dd, yyyy")}</>,
+      sortType: dateSorter
+    },
+    {
+        Header: 'Genre(s)',
+        accessor: 'genres',
+        Cell: ({ value }) => <>{value.join(', ')}</>,
+        sortType: arraySorter
+    },
+    {
+        Header: 'Code license',
+        accessor: 'codeLicense'
+    },
+    {
+        Header: 'Repository',
+        accessor: 'sourceLink',
+        Cell: ({ value }) => <a href={value}>source</a>,
+        disableSortBy: true
+    },
+    {
+      Header: 'Languages',
+      accessor: 'langs',
+      Cell: ({ value }) => <>{value.join(', ')}</>,
+      disableSortBy: true
+    },    
+  ], []
+  );
 
-const GameTable = ({ data, columns } : { columns: Column<IGameData>[], data: IGameData[] }) => {
     const {
       getTableProps,
       getTableBodyProps,
@@ -17,8 +65,9 @@ const GameTable = ({ data, columns } : { columns: Column<IGameData>[], data: IGa
       rows,
       prepareRow,
     } = useTable({ columns, data }, useSortBy);
-  
+
     return (
+      <>
       <table {...getTableProps()} className="table">
         <thead>
           {headerGroups.map((headerGroup, i) => (
@@ -53,6 +102,10 @@ const GameTable = ({ data, columns } : { columns: Column<IGameData>[], data: IGa
           })}
         </tbody>
       </table>
+       <GameDetailsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title} homepage={homepage}>
+            <p>Status: playable</p>
+      </GameDetailsModal>
+      </>
     );
   };
 
