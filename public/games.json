@@ -106,5 +106,23 @@
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/OpenTTD/OpenTTD",
         "langs": ["C++","C"]
+    },
+    {
+        "id": 13,
+        "game": {"link": "https://www.widelands.org/", "txt":"Widelands"},
+        "firstReleaseDate": "2002-02-03",
+        "genres": ["Strategy", "RTS"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/widelands/widelands",
+        "langs": ["C++","Lua"]
+    },
+    {
+        "id": 14,
+        "game": {"link": "https://github.com/gabrielecirulli/2048", "txt":"2048"},
+        "firstReleaseDate": "2014-03-02",
+        "genres": ["Puzzle"],
+        "codeLicense": "MIT",
+        "sourceLink": "https://github.com/gabrielecirulli/2048",
+        "langs": ["Javascript"]
     }
 ]

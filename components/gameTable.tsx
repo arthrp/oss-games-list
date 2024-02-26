@@ -6,7 +6,7 @@ import GameDetailsModal from './gameDetailsModal';
 import format from "date-fns/format";
 import { arraySorter, caseInsensitiveAlphabeticalSorter, dateSorter } from '@/helpers/sorters';
 
-const GameTable = ({ data } : {  data: IGameData[] }) => {
+const GameTable = ({ data }: { data: IGameData[] }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [title, setTitle] = useState("");
   const [homepage, setHomepage] = useState("");
@@ -19,12 +19,12 @@ const GameTable = ({ data } : {  data: IGameData[] }) => {
     {
       Header: 'Game',
       accessor: 'game',
-      Cell: ({value}) => <a href="#" onClick={(e) => { 
+      Cell: ({ value }) => <a href="#" onClick={(e) => {
         e.preventDefault();
         setIsModalOpen(true);
         setTitle(value.txt);
         setHomepage(value.link);
-       }}>{value.txt}</a>,
+      }}>{value.txt}</a>,
       sortType: caseInsensitiveAlphabeticalSorter
     },
     {
@@ -34,49 +34,49 @@ const GameTable = ({ data } : {  data: IGameData[] }) => {
       sortType: dateSorter
     },
     {
-        Header: 'Genre(s)',
-        accessor: 'genres',
-        Cell: ({ value }) => <>{value.join(', ')}</>,
-        sortType: arraySorter
+      Header: 'Genre(s)',
+      accessor: 'genres',
+      Cell: ({ value }) => <>{value.join(', ')}</>,
+      sortType: arraySorter
     },
     {
-        Header: 'Code license',
-        accessor: 'codeLicense'
+      Header: 'Code license',
+      accessor: 'codeLicense'
     },
     {
-        Header: 'Repository',
-        accessor: 'sourceLink',
-        Cell: ({ value }) => <a href={value}>source</a>,
-        disableSortBy: true
+      Header: 'Repository',
+      accessor: 'sourceLink',
+      Cell: ({ value }) => <a href={value}>source</a>,
+      disableSortBy: true
     },
     {
       Header: 'Languages',
       accessor: 'langs',
       Cell: ({ value }) => <>{value.join(', ')}</>,
       disableSortBy: true
-    },    
+    },
   ], []
   );
 
-    const {
-      getTableProps,
-      getTableBodyProps,
-      headerGroups,
-      rows,
-      prepareRow,
-    } = useTable({ columns, data }, useSortBy);
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable({ columns, data }, useSortBy);
 
-    return (
-      <>
+  return (
+    <>
       <table {...getTableProps()} className="table">
         <thead>
           {headerGroups.map((headerGroup, i) => (
             <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id || i} >
               {headerGroup.headers.map((column: ColumnInstance<IGameData>) => (
-                 <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.id}>
+                <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.id}>
                   {column.render('Header')}
                   <span>
-                {column.disableSortBy ? ' ' : (column.isSorted ? (column.isSortedDesc ? ' ⇊' : ' ⇈') : ' ⇅')}
+                    {column.disableSortBy ? ' ' : (column.isSorted ? (column.isSortedDesc ? ' ⇊' : ' ⇈') : ' ⇅')}
                   </span>
                 </th>
               ))}
@@ -102,11 +102,11 @@ const GameTable = ({ data } : {  data: IGameData[] }) => {
           })}
         </tbody>
       </table>
-       <GameDetailsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title} homepage={homepage}>
-            <p>Status: playable</p>
+      <GameDetailsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title} homepage={homepage}>
+        <p>Status: playable</p>
       </GameDetailsModal>
-      </>
-    );
-  };
+    </>
+  );
+};
 
 export default GameTable;
