@@ -124,5 +124,23 @@
         "codeLicense": "MIT",
         "sourceLink": "https://github.com/gabrielecirulli/2048",
         "langs": ["Javascript"]
+    },
+    {
+        "id": 15,
+        "game": {"link": "https://github.com/mapron/FreeHeroes", "txt":"FreeHeroes"},
+        "firstReleaseDate": "2020-08-10",
+        "genres": ["Strategy", "TBS"],
+        "codeLicense": "MIT",
+        "sourceLink": "https://github.com/mapron/FreeHeroes",
+        "langs": ["C++"]
+    },
+    {
+        "id": 16,
+        "game": {"link": "https://github.com/pioneerspacesim/pioneer", "txt":"Pioneer"},
+        "firstReleaseDate": "2008-06-24",
+        "genres": ["Space sim"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/pioneerspacesim/pioneer",
+        "langs": ["C++", "C", "Lua"]
     }
 ]
