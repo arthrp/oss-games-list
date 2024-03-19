@@ -142,5 +142,23 @@
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/pioneerspacesim/pioneer",
         "langs": ["C++", "C", "Lua"]
+    },
+    {
+        "id": 17,
+        "game": {"link": "https://unknown-horizons.org/", "txt":"Unknown Horizons"},
+        "firstReleaseDate": "2008-10-01",
+        "genres": ["Strategy", "RTS", "Economic sim"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/unknown-horizons/unknown-horizons",
+        "langs": ["Python"]
+    },
+    {
+        "id": 18,
+        "game": {"link": "https://github.com/lincity-ng/lincity-ng/", "txt":"LinCity-NG"},
+        "firstReleaseDate": "2005-06-20",
+        "genres": ["City-building game"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/lincity-ng/lincity-ng/",
+        "langs": ["C++", "C"]
     }
 ]
