@@ -160,5 +160,23 @@
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/lincity-ng/lincity-ng/",
         "langs": ["C++", "C"]
+    },
+    {
+        "id": 19,
+        "game": {"link": "https://openarena.ws/smfnews.php", "txt":"OpenArena"},
+        "firstReleaseDate": "2005-08-19",
+        "genres": ["Shooter","FPS"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/OpenArena/gamecode",
+        "langs": ["C"]
+    },
+    {
+        "id": 20,
+        "game": {"link": "https://umoria.org/", "txt":"Umoria"},
+        "firstReleaseDate": "2007-10-01",
+        "genres": ["Roguelike"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://github.com/dungeons-of-moria/umoria",
+        "langs": ["C++"]
     }
 ]

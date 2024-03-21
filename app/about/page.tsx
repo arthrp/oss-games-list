@@ -8,6 +8,7 @@ export default function About() {
             <p >To be included in this list game should be:</p>
             <ol className="list-decimal">
                 <li>Fully open-source - i.e. no proprietary assets. Asset license may vary, but those must be free to use.</li>
+                <li>Game must be in a playable state.</li>
                 <li>Unique in some regard - just another clone of Pong won&lsquo;t do. This naturally doesn&lsquo;t apply to remakes of complex games such as OpenTTD.</li>
                 <li>Have some sort of recognition - be featured in a game jam, distributed in a popular linux distro, etc.</li>
             </ol>
