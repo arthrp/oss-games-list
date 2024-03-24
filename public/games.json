@@ -174,9 +174,27 @@
         "id": 20,
         "game": {"link": "https://umoria.org/", "txt":"Umoria"},
         "firstReleaseDate": "2007-10-01",
-        "genres": ["Roguelike"],
+        "genres": ["Roguelike", "RPG"],
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://github.com/dungeons-of-moria/umoria",
         "langs": ["C++"]
+    },
+    {
+        "id": 21,
+        "game": {"link": "https://github.com/Pyrdacor/Ambermoon.net", "txt":"Ambermoon.net"},
+        "firstReleaseDate": "2020-12-03",
+        "genres": ["RPG"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/Pyrdacor/Ambermoon.net",
+        "langs": ["C#"]
+    },
+    {
+        "id": 22,
+        "game": {"link": "https://xonotic.org/", "txt":"Xonotic"},
+        "firstReleaseDate": "2010-12-23",
+        "genres": ["Shooter", "FPS"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://git.xonotic.org/",
+        "langs": ["C"]
     }
 ]
