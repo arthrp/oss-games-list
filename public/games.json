@@ -223,5 +223,14 @@
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/whoozle/btanks",
         "langs": ["C++", "C"]
+    },
+    {
+        "id": 26,
+        "game": {"link": "https://shatteredpixel.com/", "txt":"Shattered Pixel Dungeon"},
+        "firstReleaseDate": "2014-08-05",
+        "genres": ["Roguelike", "RPG"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/00-Evan/shattered-pixel-dungeon",
+        "langs": ["Java"]
     }
 ]
