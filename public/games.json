@@ -205,5 +205,23 @@
         "codeLicense": "MIT",
         "sourceLink": "https://github.com/burntcustard/tiny-yurts",
         "langs": ["Javascript"]
+    },
+    {
+        "id": 24,
+        "game": {"link": "https://reirei.neocities.org/", "txt":"Super Castle Game"},
+        "firstReleaseDate": "2023-09-13",
+        "genres": ["Puzzle"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/mvasilkov/super2023",
+        "langs": ["Typescript"]
+    },
+    {
+        "id": 25,
+        "game": {"link": "https://sourceforge.net/projects/btanks/", "txt":"Battle tanks"},
+        "firstReleaseDate": "2007-01-19",
+        "genres": ["Arcade"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/whoozle/btanks",
+        "langs": ["C++", "C"]
     }
 ]
