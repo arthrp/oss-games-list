@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('/games.json');
+      const response = await fetch('/games_min.json');
       const jsonData = await response.json();
 
       const parsedData = jsonData.map(

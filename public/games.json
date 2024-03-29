@@ -196,5 +196,14 @@
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://git.xonotic.org/",
         "langs": ["C"]
+    },
+    {
+        "id": 23,
+        "game": {"link": "https://burnt.io/tiny-yurts/", "txt":"Tiny Yurts"},
+        "firstReleaseDate": "2023-09-21",
+        "genres": ["Puzzle"],
+        "codeLicense": "MIT",
+        "sourceLink": "https://github.com/burntcustard/tiny-yurts",
+        "langs": ["Javascript"]
     }
 ]
