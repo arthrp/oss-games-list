@@ -232,5 +232,14 @@
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/00-Evan/shattered-pixel-dungeon",
         "langs": ["Java"]
+    },
+    {
+        "id": 27,
+        "game": {"link": "https://trackballs.github.io/", "txt":"Trackballs"},
+        "firstReleaseDate": "2003-02-15",
+        "genres": ["Arcade"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/trackballs/trackballs/",
+        "langs": ["C++", "Scheme"]
     }
 ]
