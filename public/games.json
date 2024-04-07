@@ -241,5 +241,14 @@
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/trackballs/trackballs/",
         "langs": ["C++", "Scheme"]
+    },
+    {
+        "id": 28,
+        "game": {"link": "https://viewizard.com/", "txt":"Astromenace"},
+        "firstReleaseDate": "2007-02-20",
+        "genres": ["Arcade", "Scrolling shooter"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/viewizard/astromenace",
+        "langs": ["C++", "C"]
     }
 ]
