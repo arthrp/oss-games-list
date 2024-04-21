@@ -29,3 +29,11 @@ body {
 #aboutDesc {
   text-align: center;
 }
+
+@layer base {
+  html,
+  body,
+  #__next {
+    @apply h-screen;
+  }
+}
