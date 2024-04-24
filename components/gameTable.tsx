@@ -3,8 +3,8 @@ import { ExtendedColumn, IGameData } from '@/data/columns';
 import React, { useState } from 'react';
 import { Column, useSortBy, useTable, ColumnInstance } from 'react-table';
 import GameDetailsModal from './gameDetailsModal';
-import format from "date-fns/format";
 import { arraySorter, caseInsensitiveAlphabeticalSorter, dateSorter } from '@/helpers/sorters';
+import { format } from 'date-fns';
 
 const GameTable = ({ data }: { data: IGameData[] }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
