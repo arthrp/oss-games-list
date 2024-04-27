@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import GameTable from '../components/gameTable';
 import { IGameData } from '../data/columns';
 import { useEffect, useState } from 'react';
-import Header from '@/components/header';
+import Header from '@/components/header/header';
 import { parseISO } from 'date-fns';
 
 export default function Home() {
