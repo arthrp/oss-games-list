@@ -1,0 +1,15 @@
+.closeButton {
+    @apply mt-4 bg-red-500 text-white py-2 px-4 rounded
+}
+
+.closeButton:hover {
+    @apply bg-red-600
+}
+
+.modalInner {
+    @apply bg-white p-4 rounded-lg shadow-lg min-w-[300px]
+}
+
+.modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center
+}

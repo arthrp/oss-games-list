@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './gameDetailsModal.module.css'
 
 interface ModalProps {
   isOpen: boolean;
@@ -12,11 +13,11 @@ const GameDetailsModal: React.FC<ModalProps> = ({ isOpen, onClose, title, childr
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-4 rounded-lg shadow-lg min-w-[300px]">
+    <div className={styles.modal}>
+      <div className={styles.modalInner}>
         <h3><a href={homepage}>{title}</a></h3>
         {children}
-        <button onClick={onClose} className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
+        <button onClick={onClose} className={styles.closeButton}>
           Close
         </button>
       </div>

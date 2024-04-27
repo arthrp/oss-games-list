@@ -2,7 +2,7 @@
 import { ExtendedColumn, IGameData } from '@/data/columns';
 import React, { useState } from 'react';
 import { Column, useSortBy, useTable, ColumnInstance } from 'react-table';
-import GameDetailsModal from './gameDetailsModal';
+import GameDetailsModal from './gameDetailsModal/gameDetailsModal';
 import { arraySorter, caseInsensitiveAlphabeticalSorter, dateSorter } from '@/helpers/sorters';
 import { format } from 'date-fns';
 import Carousel from './carousel';
