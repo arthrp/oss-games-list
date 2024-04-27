@@ -3,7 +3,8 @@ import { Column, CellProps, UseSortByColumnOptions, Row } from "react-table";
 
 export interface IHref {
     txt: string,
-    link: string
+    link: string,
+    screens: string[]
 }
 
 export interface IGameData {
@@ -13,6 +14,7 @@ export interface IGameData {
     genres: string[],
     codeLicense: string,
     sourceLink: string,
+    screens: string[],
     langs: string[]
 };
 

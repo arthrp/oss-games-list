@@ -5,11 +5,13 @@ import { Column, useSortBy, useTable, ColumnInstance } from 'react-table';
 import GameDetailsModal from './gameDetailsModal';
 import { arraySorter, caseInsensitiveAlphabeticalSorter, dateSorter } from '@/helpers/sorters';
 import { format } from 'date-fns';
+import Carousel from './carousel';
 
 const GameTable = ({ data }: { data: IGameData[] }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [title, setTitle] = useState("");
   const [homepage, setHomepage] = useState("");
+  const [screenshots, setScreenshots] = useState<string[]>([])
 
   const columns: ExtendedColumn[] = React.useMemo(() => [
     {
@@ -19,14 +21,15 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
     {
       Header: 'Game',
       accessor: 'game',
-      Cell: ({ value }) => <a href="#" onClick={(e) => {
+      Cell: ({ value, row }) => <a href="#" onClick={(e) => {
         e.preventDefault();
         setIsModalOpen(true);
         setTitle(value.txt);
         setHomepage(value.link);
+        setScreenshots(value.screens.map(s => `img/${parseInt(row.id, 10)+1}/${s}`));
       }}>{value.txt}</a>,
       sortType: caseInsensitiveAlphabeticalSorter
-    },
+    }, 
     {
       Header: 'First release date',
       accessor: 'firstReleaseDate',
@@ -104,6 +107,8 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
       </table>
       <GameDetailsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title} homepage={homepage}>
         <p>Status: playable</p>
+        <p>Screenshots:</p>
+        <Carousel images={screenshots} />
       </GameDetailsModal>
     </>
   );
