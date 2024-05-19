@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './carousel.module.css';
 
 interface CarouselProps {
  images: string[];
@@ -12,18 +13,18 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
  };
 
  return (
-    <div className="flex space-x-2 overflow-x-auto">
+    <div className={styles.wrapper}>
       {images.map((image, index) => (
         <img
           key={index}
           src={image}
           alt={`carousel-${index}`}
-          className="w-24 h-24 object-cover cursor-pointer"
+          className={styles.imagePreview}
           onClick={() => handleImageClick(image)}
         />
       ))}
       {selectedImage && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+        <div className={styles.fullImageWrapper}>
           <img
             src={selectedImage}
             alt="selected"

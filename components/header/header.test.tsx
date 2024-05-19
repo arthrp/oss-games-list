@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Header from './header'; // Adjust the import path as necessary
+import Header from './header';
 
 describe('Header Component', () => {
   it('renders the navigation links', () => {

@@ -5,7 +5,7 @@ import { Column, useSortBy, useTable, ColumnInstance } from 'react-table';
 import GameDetailsModal from './gameDetailsModal/gameDetailsModal';
 import { arraySorter, caseInsensitiveAlphabeticalSorter, dateSorter } from '@/helpers/sorters';
 import { format } from 'date-fns';
-import Carousel from './carousel';
+import Carousel from './carousel/carousel';
 
 const GameTable = ({ data }: { data: IGameData[] }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
