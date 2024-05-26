@@ -6,6 +6,7 @@ import { IGameData } from '../data/columns';
 import { useEffect, useState } from 'react';
 import Header from '@/components/header/header';
 import { parseISO } from 'date-fns';
+import React from 'react';
 
 export default function Home() {
   const [gameData, setGameData] = useState<IGameData[]>([]);
