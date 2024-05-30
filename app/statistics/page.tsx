@@ -9,14 +9,13 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Statistics() {
     const data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: [],
         datasets: [
             {
                 label: 'Count',
                 data: [],
                 backgroundColor: [],
                 borderColor: [],
-                borderWidth: 1,
             },
         ],
     };
@@ -51,7 +50,7 @@ export default function Statistics() {
     }, []);
 
     return (
-    <div className="container"  style={{ height: '100%' }}>
+    <div className="container"  style={{ height: '100%', maxHeight: 600 }}>
         <h1 className="mb-5 mt-5">Statistics</h1>
         <Pie data={chartData} options={options} />
     </div>
