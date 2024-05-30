@@ -17,6 +17,11 @@ const Header: React.FC = () => {
                 About
             </Link>
           </li>
+          <li className={styles.navItem}>
+            <Link href="/statistics" className={styles.navLink}>
+                Statistics
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
