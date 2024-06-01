@@ -1,6 +1,5 @@
 export function getColors(count: number, opacity: number){
     const colors = ColorArr.slice(0,count).map(c => `rgb(${c},${opacity})`);
-    console.log(colors);
     return colors;
 }
 
@@ -11,6 +10,6 @@ const ColorArr = [
     "75, 192, 192",
     "54, 162, 235",
     "153, 102, 255",
-    "0,76,109",
+    "0, 76, 109",
     "201, 203, 207"
 ];
