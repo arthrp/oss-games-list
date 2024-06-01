@@ -4,6 +4,7 @@ import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { parseISO } from "date-fns";
 import { IGameData } from "@/data/columns";
+import { getColors } from "@/helpers/colors";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -43,10 +44,12 @@ export default function Statistics() {
                 ...item,
                 firstReleaseDate: parseISO(item.firstReleaseDate),
               }));
-            setChartData(getChartData(parsedData));
+            const c = getChartData(parsedData)
+            setChartData(c);
           };
 
         fetchData();
+        getColors(7,0.5);
     }, []);
 
     return (
@@ -58,11 +61,8 @@ export default function Statistics() {
 }
 
 function getChartData(gameData: IGameData[]){
-    interface Acc {
-        [key: string]: number;
-    }
-
-    const top = gameData.map(e => e.codeLicense).reduce<Acc>((acc,val) => { 
+    
+    const top = gameData.map(e => e.codeLicense).reduce<{ [key: string]: number }>((acc,val) => { 
         if (!acc[val]) {
             acc[val] = 0;
           }
@@ -70,30 +70,16 @@ function getChartData(gameData: IGameData[]){
           return acc;
     }, {});
 
+    const bgColors = getColors(Object.keys(top).length, 0.6);
+    const borderColors = getColors(Object.keys(top).length, 1);
     const data = {
         labels: Object.keys(top),
         datasets: [
             {
                 label: 'Count',
                 data: Object.values(top),
-                backgroundColor: [
-                    'rgb(255, 99, 132, 0.5)',
-                    'rgb(255, 159, 64, 0.5)',
-                    'rgb(255, 205, 86, 0.5)',
-                    'rgb(75, 192, 192, 0.5)',
-                    'rgb(54, 162, 235, 0.5)',
-                    'rgb(153, 102, 255, 0.5)',
-                    'rgb(201, 203, 207, 0.5)'
-                ],
-                borderColor: [
-                    'rgb(255, 99, 132, 1)',
-                    'rgb(255, 159, 64, 1)',
-                    'rgb(255, 205, 86, 1)',
-                    'rgb(75, 192, 192, 1)',
-                    'rgb(54, 162, 235, 1)',
-                    'rgb(153, 102, 255, 1)',
-                    'rgb(201, 203, 207, 1)'
-                ],
+                backgroundColor: bgColors,
+                borderColor: borderColors,
                 borderWidth: 1,
             },
         ],
