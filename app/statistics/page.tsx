@@ -5,6 +5,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { parseISO } from "date-fns";
 import { IGameData } from "@/data/columns";
 import { getColors } from "@/helpers/colors";
+import 'bootstrap/dist/css/bootstrap.css'; 
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
