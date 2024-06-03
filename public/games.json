@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "game": {"link": "https://play0ad.com/", "txt":"0 A.D.", "screens": []},
+        "game": {"link": "https://play0ad.com/", "txt":"0 A.D.", "screens": ["0ad.jpg"]},
         "firstReleaseDate": "2010-04-01",
         "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-2.0-or-later",
@@ -120,7 +120,7 @@
     },
     {
         "id": 13,
-        "game": {"link": "https://www.widelands.org/", "txt":"Widelands", "screens": []},
+        "game": {"link": "https://www.widelands.org/", "txt":"Widelands", "screens": ["widelands.jpg"]},
         "firstReleaseDate": "2002-02-03",
         "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-2.0",
