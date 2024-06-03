@@ -14,7 +14,6 @@ export interface IGameData {
     genres: string[],
     codeLicense: string,
     sourceLink: string,
-    screens: string[],
     langs: string[]
 };
 

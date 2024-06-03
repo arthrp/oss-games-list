@@ -15,7 +15,6 @@
         "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://trac.wildfiregames.com/browser/ps/trunk/",
-        "screens": [],
         "langs": ["C++"]
     },
     {
@@ -25,7 +24,6 @@
         "genres": ["Sandbox"],
         "codeLicense": "LGPL-2.1-or-later",
         "sourceLink": "https://github.com/minetest/minetest",
-        "screens": [],
         "langs": ["C++", "Lua"]
     },
     {
@@ -35,7 +33,6 @@
         "genres": ["Roguelike", "RPG"],
         "codeLicense": "NetHack General Public License",
         "sourceLink": "https://github.com/NetHack/NetHack",
-        "screens": [],
         "langs": ["C", "Lua"]
     },
     {
@@ -45,7 +42,6 @@
         "genres": ["Strategy", "TBS"],
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://github.com/freeciv/freeciv",
-        "screens": [],
         "langs": ["C", "C++", "Lua"]
     },
     {
@@ -55,7 +51,6 @@
         "genres": ["Strategy", "Chess"],
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://git.savannah.gnu.org/cgit/chess.git",
-        "screens": [],
         "langs": ["C++"]
     },
     {
@@ -65,7 +60,6 @@
         "genres": ["Racing", "Kart racing"],
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://github.com/supertuxkart/stk-code",
-        "screens": [],
         "langs": ["C++", "C"]
     },
     {
@@ -75,7 +69,6 @@
         "genres": ["Strategy", "TBS"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/freeorion/freeorion",
-        "screens": [],
         "langs": ["C++", "Python"]
     },
     {
@@ -85,7 +78,6 @@
         "genres": ["Platformer", "Metroidvania"],
         "codeLicense": "MIT",
         "sourceLink": "https://github.com/Louis-Tarvin/Elemental-Sorcerer",
-        "screens": [],
         "langs": ["Rust"]
     },
     {
@@ -95,7 +87,6 @@
         "genres": ["Strategy", "TBS"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/FreeCol/freecol",
-        "screens": [],
         "langs": ["Java"]
     },
     {
@@ -105,7 +96,6 @@
         "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://bitbucket.org/giszmo/glob2/src/master/",
-        "screens": [],
         "langs": ["C++"]
     },
     {
@@ -115,7 +105,6 @@
         "genres": ["Business sim", "Tycoon"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/OpenTTD/OpenTTD",
-        "screens": [],
         "langs": ["C++","C"]
     },
     {
@@ -125,7 +114,6 @@
         "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/widelands/widelands",
-        "screens": [],
         "langs": ["C++","Lua"]
     },
     {
@@ -135,7 +123,6 @@
         "genres": ["Puzzle"],
         "codeLicense": "MIT",
         "sourceLink": "https://github.com/gabrielecirulli/2048",
-        "screens": [],
         "langs": ["Javascript"]
     },
     {
@@ -145,7 +132,6 @@
         "genres": ["Strategy", "TBS"],
         "codeLicense": "MIT",
         "sourceLink": "https://github.com/mapron/FreeHeroes",
-        "screens": [],
         "langs": ["C++"]
     },
     {
@@ -155,7 +141,6 @@
         "genres": ["Space sim"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/pioneerspacesim/pioneer",
-        "screens": [],
         "langs": ["C++", "C", "Lua"]
     },
     {
@@ -165,7 +150,6 @@
         "genres": ["Strategy", "RTS", "Economic sim"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/unknown-horizons/unknown-horizons",
-        "screens": [],
         "langs": ["Python"]
     },
     {
@@ -175,7 +159,6 @@
         "genres": ["City-building game"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/lincity-ng/lincity-ng/",
-        "screens": [],
         "langs": ["C++", "C"]
     },
     {
@@ -185,7 +168,6 @@
         "genres": ["Shooter","FPS"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/OpenArena/gamecode",
-        "screens": [],
         "langs": ["C"]
     },
     {
@@ -195,7 +177,6 @@
         "genres": ["Roguelike", "RPG"],
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://github.com/dungeons-of-moria/umoria",
-        "screens": [],
         "langs": ["C++"]
     },
     {
@@ -205,7 +186,6 @@
         "genres": ["RPG"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/Pyrdacor/Ambermoon.net",
-        "screens": [],
         "langs": ["C#"]
     },
     {
@@ -215,7 +195,6 @@
         "genres": ["Shooter", "FPS"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://git.xonotic.org/",
-        "screens": [],
         "langs": ["C"]
     },
     {
@@ -225,7 +204,6 @@
         "genres": ["Puzzle"],
         "codeLicense": "MIT",
         "sourceLink": "https://github.com/burntcustard/tiny-yurts",
-        "screens": [],
         "langs": ["Javascript"]
     },
     {
@@ -235,7 +213,6 @@
         "genres": ["Puzzle"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/mvasilkov/super2023",
-        "screens": [],
         "langs": ["Typescript"]
     },
     {
@@ -245,7 +222,6 @@
         "genres": ["Arcade"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/whoozle/btanks",
-        "screens": [],
         "langs": ["C++", "C"]
     },
     {
@@ -255,7 +231,6 @@
         "genres": ["Roguelike", "RPG"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/00-Evan/shattered-pixel-dungeon",
-        "screens": [],
         "langs": ["Java"]
     },
     {
@@ -265,7 +240,6 @@
         "genres": ["Arcade"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/trackballs/trackballs/",
-        "screens": [],
         "langs": ["C++", "Scheme"]
     },
     {
@@ -275,7 +249,15 @@
         "genres": ["Arcade", "Scrolling shooter"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/viewizard/astromenace",
-        "screens": [],
         "langs": ["C++", "C"]
+    },
+    {
+        "id": 29,
+        "game": {"link": "https://unvanquished.net/", "txt":"Unvanquished", "screens": []},
+        "firstReleaseDate": "2012-02-29",
+        "genres": ["Shooter", "FPS", "Strategy", "RTS"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/Unvanquished/Unvanquished",
+        "langs": ["C++", "GLSL"]
     }
 ]
