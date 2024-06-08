@@ -259,5 +259,14 @@
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/Unvanquished/Unvanquished",
         "langs": ["C++", "GLSL"]
+    },
+    {
+        "id": 30,
+        "game": {"link": "https://veloren.net/", "txt":"Veloren", "screens": []},
+        "firstReleaseDate": "2019-02-01",
+        "genres": ["RPG", "MMORPG"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://gitlab.com/veloren/veloren",
+        "langs": ["Rust"]
     }
 ]
