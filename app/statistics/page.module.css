@@ -1,0 +1,8 @@
+.subheader {
+    @apply mb-8 text-3xl font-bold;
+}
+
+.chartContainer {
+    height: '100%';
+    max-height: 600px;
+}
