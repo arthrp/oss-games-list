@@ -55,7 +55,7 @@
     },
     {
         "id": 7,
-        "game": {"link": "https://supertuxkart.net", "txt":"SuperTuxKart", "screens": []},
+        "game": {"link": "https://supertuxkart.net", "txt":"SuperTuxKart", "screens": ["tux.jpg"]},
         "firstReleaseDate": "2007-08-06",
         "genres": ["Racing", "Kart racing"],
         "codeLicense": "GPL-3.0-or-later",
