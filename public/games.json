@@ -268,5 +268,23 @@
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://gitlab.com/veloren/veloren",
         "langs": ["Rust"]
+    },
+    {
+        "id": 31,
+        "game": {"link": "https://angband.github.io/angband/", "txt":"Angband", "screens": []},
+        "firstReleaseDate": "1993-04-11",
+        "genres": ["Roguelike", "RPG"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://github.com/angband/angband",
+        "langs": ["C"]
+    },
+    {
+        "id": 32,
+        "game": {"link": "https://cataclysmdda.org/", "txt":"Cataclysm: Dark Days Ahead", "screens": []},
+        "firstReleaseDate": "2013-02-26",
+        "genres": ["Survival"],
+        "codeLicense": "CC BY-SA",
+        "sourceLink": "https://github.com/CleverRaven/Cataclysm-DDA",
+        "langs": ["C++"]
     }
 ]
