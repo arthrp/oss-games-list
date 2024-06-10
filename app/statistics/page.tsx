@@ -66,7 +66,7 @@ export default function Statistics() {
             <Pie data={licenseData} options={options} />
         </div>
 
-        <div className={css.chartContainer} style={{ marginTop: 70 }}>
+        <div className={css.chartContainer} style={{ marginTop: 90 }}>
             <h2 className={css.subheader}>Primary language</h2>
             <Pie data={languageData} options={options} />
         </div>
