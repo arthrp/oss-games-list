@@ -64,7 +64,7 @@
     },
     {
         "id": 8,
-        "game": {"link": "https://freeorion.org/index.php/Main_Page", "txt":"FreeOrion", "screens": []},
+        "game": {"link": "https://freeorion.org/index.php/Main_Page", "txt":"FreeOrion", "screens": ["freeorion.jpg"]},
         "firstReleaseDate": "2004-03-07",
         "genres": ["Strategy", "TBS"],
         "codeLicense": "GPL-2.0",
@@ -286,5 +286,14 @@
         "codeLicense": "CC BY-SA",
         "sourceLink": "https://github.com/CleverRaven/Cataclysm-DDA",
         "langs": ["C++"]
+    },
+    {
+        "id": 33,
+        "game": {"link": "https://hedgewars.org/", "txt":"Hedgewars", "screens": []},
+        "firstReleaseDate": "2006-01-10",
+        "genres": ["Strategy", "Action", "TBS"],
+        "codeLicense": "GPL-2.0",
+        "sourceLink": "https://hg.hedgewars.org/hedgewars/",
+        "langs": ["Pascal", "Lua", "C++"]
     }
 ]
