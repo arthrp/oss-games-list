@@ -295,5 +295,14 @@
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://hg.hedgewars.org/hedgewars/",
         "langs": ["Pascal", "Lua", "C++"]
+    },
+    {
+        "id": 34,
+        "game": {"link": "https://endless-sky.github.io/", "txt":"Endless sky", "screens": []},
+        "firstReleaseDate": "2014-01-26",
+        "genres": ["Sandbox", "Arcade"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/endless-sky/endless-sky",
+        "langs": ["C++"]
     }
 ]
