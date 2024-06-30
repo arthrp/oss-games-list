@@ -6,3 +6,7 @@
     height: '100%';
     max-height: 600px;
 }
+
+.notFirstContainer {
+    margin: 90px 0;
+}

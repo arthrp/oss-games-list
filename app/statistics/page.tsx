@@ -59,7 +59,6 @@ export default function Statistics() {
           };
 
         fetchData();
-        getColors(7,0.5);
     }, []);
 
     return (
@@ -71,7 +70,7 @@ export default function Statistics() {
             <Pie data={licenseData} options={options} />
         </div>
 
-        <div className={css.chartContainer} style={{ marginTop: 90 }}>
+        <div className={`${css.chartContainer} ${css.notFirstContainer}`} >
             <h2 className={css.subheader}>Primary language</h2>
             <Pie data={languageData} options={options} />
         </div>
@@ -107,7 +106,7 @@ function getDataWithOther(data: CountableUnit[]){
     }
     const res = sorted.slice(0,7);
     res[7] = { label: "Other", count: totalOther };
-    console.log(res[7]);
+
     return getData(res);
 }
 
