@@ -304,5 +304,14 @@
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/endless-sky/endless-sky",
         "langs": ["C++"]
+    },
+    {
+        "id": 35,
+        "game": {"link": "https://a-nikolaev.github.io/curseofwar/", "txt":"Curse of war", "screens": []},
+        "firstReleaseDate": "2013-06-02",
+        "genres": ["Strategy", "RTS"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://github.com/a-nikolaev/curseofwar",
+        "langs": ["C"]
     }
 ]
