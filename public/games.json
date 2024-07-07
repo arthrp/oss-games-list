@@ -322,5 +322,14 @@
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/Anuken/Mindustry",
         "langs": ["Java"]
+    },
+    {
+        "id": 37,
+        "game": {"link": "https://javelinrl.wordpress.com/", "txt":"Javelin", "screens": []},
+        "firstReleaseDate": "2015-08-28",
+        "genres": ["RPG"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/tukkek/javelin",
+        "langs": ["Java"]
     }
 ]

@@ -10,7 +10,7 @@ export default function About() {
 
             <p >To be included in this list game should be:</p>
             <ol className="list-decimal">
-                <li>Fully open-source - i.e. no proprietary assets. Asset license may vary, but those must be free to use.</li>
+                <li>Fully open-source - i.e. no proprietary assets. Asset license may vary, but those must be free to use (so for example <a href="https://github.com/id-Software/DOOM">Doom</a> and other famous open-source games are excluded).</li>
                 <li>Only games are listed, not game engines (Godot, bevy, etc).</li>
                 <li>Game must be in a playable state.</li>
                 <li>Source code must be released under any of <a href="https://opensource.org/licenses">OSI approved liceses</a>. Games with no license specified are not featured in the list.</li>
