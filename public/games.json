@@ -328,8 +328,35 @@
         "game": {"link": "https://javelinrl.wordpress.com/", "txt":"Javelin", "screens": []},
         "firstReleaseDate": "2015-08-28",
         "genres": ["RPG"],
-        "codeLicense": "GPL-3.0",
+        "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/tukkek/javelin",
         "langs": ["Java"]
+    },
+    {
+        "id": 38,
+        "game": {"link": "https://team-potato.itch.io/titan-tactics", "txt":"Titan tactics", "screens": []},
+        "firstReleaseDate": "2021-04-12",
+        "genres": ["RPG"],
+        "codeLicense": "CC0",
+        "sourceLink": "https://gitlab.com/team-potato/titan_tactics",
+        "langs": ["GDScript"]
+    },
+    {
+        "id": 39,
+        "game": {"link": "https://gitlab.com/solarus-games/games/children-of-solarus", "txt":"Children of Solarus", "screens": []},
+        "firstReleaseDate": "2011-03-31",
+        "genres": ["RPG"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://gitlab.com/solarus-games/games/children-of-solarus",
+        "langs": ["C++", "Lua"]
+    },
+    {
+        "id": 40,
+        "game": {"link": "https://empty-clip.gitlab.io/", "txt":"Empty Clip", "screens": []},
+        "firstReleaseDate": "2006-05-15",
+        "genres": ["RPG", "Action"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://gitlab.com/empty-clip/code",
+        "langs": ["C++"]
     }
 ]
