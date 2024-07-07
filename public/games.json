@@ -313,5 +313,14 @@
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://github.com/a-nikolaev/curseofwar",
         "langs": ["C"]
+    },
+    {
+        "id": 36,
+        "game": {"link": "https://mindustrygame.github.io/", "txt":"Mindustry", "screens": []},
+        "firstReleaseDate": "2017-04-30",
+        "genres": ["Strategy", "RTS", "Tower defense"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/Anuken/Mindustry",
+        "langs": ["Java"]
     }
 ]
