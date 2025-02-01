@@ -358,5 +358,14 @@
         "codeLicense": "GPL-3.0-or-later",
         "sourceLink": "https://gitlab.com/empty-clip/code",
         "langs": ["C++"]
+    },
+    {
+        "id": 41,
+        "game": {"link": "https://wz2100.net/", "txt":"Warzone 2100", "screens": []},
+        "firstReleaseDate": "2005-07-12",
+        "genres": ["RPG", "Action"],
+        "codeLicense": "GPL-2.0-or-later",
+        "sourceLink": "https://github.com/Warzone2100/warzone2100",
+        "langs": ["C++", "Javascript"]
     }
 ]
