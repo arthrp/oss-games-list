@@ -363,7 +363,7 @@
         "id": 41,
         "game": {"link": "https://wz2100.net/", "txt":"Warzone 2100", "screens": []},
         "firstReleaseDate": "2005-07-12",
-        "genres": ["RPG", "Action"],
+        "genres": ["RTS", "Strategy"],
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://github.com/Warzone2100/warzone2100",
         "langs": ["C++", "Javascript"]
