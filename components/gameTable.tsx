@@ -58,14 +58,14 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
       header: 'Code license',
       cell: info => info.getValue(),
     }),
-    columnHelper.accessor('sourceLink', {
-      header: 'Repository',
-      cell: info => <a href={info.getValue()}>source</a>,
-      enableSorting: false
-    }),
     columnHelper.accessor('langs', {
       header: 'Languages',
       cell: info => <>{info.getValue().join(', ')}</>,
+      enableSorting: false
+    }),
+    columnHelper.accessor('sourceLink', {
+      header: 'Repository',
+      cell: info => <a href={info.getValue()}>source</a>,
       enableSorting: false
     }),
   ], [columnHelper]);
