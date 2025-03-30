@@ -1,7 +1,14 @@
 'use client';
 import { ExtendedColumn, IGameData } from '@/data/columns';
 import React, { useState } from 'react';
-import { Column, useSortBy, useTable, ColumnInstance } from 'react-table';
+import { 
+  useReactTable, 
+  getCoreRowModel, 
+  getSortedRowModel, 
+  flexRender,
+  SortingState,
+  createColumnHelper
+} from '@tanstack/react-table';
 import GameDetailsModal from './gameDetailsModal/gameDetailsModal';
 import { arraySorter, caseInsensitiveAlphabeticalSorter, dateSorter } from '@/helpers/sorters';
 import { format } from 'date-fns';
@@ -11,98 +18,113 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [title, setTitle] = useState("");
   const [homepage, setHomepage] = useState("");
-  const [screenshots, setScreenshots] = useState<string[]>([])
+  const [screenshots, setScreenshots] = useState<string[]>([]);
+  const [sorting, setSorting] = useState<SortingState>([]);
 
-  const columns: ExtendedColumn[] = React.useMemo(() => [
-    {
-      Header: 'ID',
-      accessor: 'id',
-    },
-    {
-      Header: 'Game',
-      accessor: 'game',
-      Cell: ({ value, row }) => <a href="#" onClick={(e) => {
-        e.preventDefault();
-        setIsModalOpen(true);
-        setTitle(value.txt);
-        setHomepage(value.link);
-        setScreenshots(value.screens.map(s => `img/${parseInt(row.id, 10)+1}/${s}`));
-      }}>{value.txt}</a>,
-      sortType: caseInsensitiveAlphabeticalSorter
-    }, 
-    {
-      Header: 'First release date',
-      accessor: 'firstReleaseDate',
-      Cell: ({ value }: { value: Date }) => <>{format(value, "MMMM dd, yyyy")}</>,
-      sortType: dateSorter
-    },
-    {
-      Header: 'Genre(s)',
-      accessor: 'genres',
-      Cell: ({ value }) => <>{value.join(', ')}</>,
-      sortType: arraySorter
-    },
-    {
-      Header: 'Code license',
-      accessor: 'codeLicense'
-    },
-    {
-      Header: 'Repository',
-      accessor: 'sourceLink',
-      Cell: ({ value }) => <a href={value}>source</a>,
-      disableSortBy: true
-    },
-    {
-      Header: 'Languages',
-      accessor: 'langs',
-      Cell: ({ value }) => <>{value.join(', ')}</>,
-      disableSortBy: true
-    },
-  ], []
-  );
+  const columnHelper = createColumnHelper<IGameData>();
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable({ columns, data }, useSortBy);
+  const columns = React.useMemo(() => [
+    columnHelper.accessor('id', {
+      header: 'ID',
+      cell: info => info.getValue(),
+    }),
+    columnHelper.accessor('game', {
+      header: 'Game',
+      cell: info => {
+        const value = info.getValue();
+        return (
+          <a href="#" onClick={(e) => {
+            e.preventDefault();
+            setIsModalOpen(true);
+            setTitle(value.txt);
+            setHomepage(value.link);
+            setScreenshots(value.screens.map(s => `img/${parseInt(info.row.original.id.toString(), 10)+1}/${s}`));
+          }}>{value.txt}</a>
+        );
+      },
+      sortingFn: (rowA, rowB) => caseInsensitiveAlphabeticalSorter(rowA.original, rowB.original)
+    }),
+    columnHelper.accessor('firstReleaseDate', {
+      header: 'First release date',
+      cell: info => <>{format(info.getValue(), "MMMM dd, yyyy")}</>,
+      sortingFn: (rowA, rowB) => dateSorter(rowA.original, rowB.original, 'firstReleaseDate')
+    }),
+    columnHelper.accessor('genres', {
+      header: 'Genre(s)',
+      cell: info => <>{info.getValue().join(', ')}</>,
+      sortingFn: (rowA, rowB) => arraySorter(rowA.original, rowB.original)
+    }),
+    columnHelper.accessor('codeLicense', {
+      header: 'Code license',
+      cell: info => info.getValue(),
+    }),
+    columnHelper.accessor('sourceLink', {
+      header: 'Repository',
+      cell: info => <a href={info.getValue()}>source</a>,
+      enableSorting: false
+    }),
+    columnHelper.accessor('langs', {
+      header: 'Languages',
+      cell: info => <>{info.getValue().join(', ')}</>,
+      enableSorting: false
+    }),
+  ], [columnHelper]);
+
+  const table = useReactTable({
+    data,
+    columns,
+    state: {
+      sorting,
+    },
+    onSortingChange: setSorting,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+  });
 
   return (
     <>
-      <table {...getTableProps()} className="table">
+      <table className="table">
         <thead>
-          {headerGroups.map((headerGroup, i) => (
-            <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id || i} >
-              {headerGroup.headers.map((column: ColumnInstance<IGameData>) => (
-                <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.id}>
-                  {column.render('Header')}
-                  <span>
-                    {column.disableSortBy ? ' ' : (column.isSorted ? (column.isSortedDesc ? ' ⇊' : ' ⇈') : ' ⇅')}
-                  </span>
+          {table.getHeaderGroups().map(headerGroup => (
+            <tr key={headerGroup.id}>
+              {headerGroup.headers.map(header => (
+                <th key={header.id} colSpan={header.colSpan}>
+                  {header.isPlaceholder ? null : (
+                    <div
+                      {...{
+                        className: header.column.getCanSort() ? 'cursor-pointer select-none' : '',
+                        onClick: header.column.getToggleSortingHandler(),
+                      }}
+                    >
+                      {flexRender(
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
+                      <span>
+                        {header.column.getCanSort()
+                          ? {
+                              asc: ' ⇈',
+                              desc: ' ⇊',
+                            }[header.column.getIsSorted() as string] ?? ' ⇅'
+                          : ''}
+                      </span>
+                    </div>
+                  )}
                 </th>
               ))}
             </tr>
           ))}
         </thead>
-
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row, i) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()} key={row.id || i}>
-                {row.cells.map(cell => {
-                  // Cell
-                  return (
-                    <td {...cell.getCellProps()} key={cell.column.id}>
-                      {cell.render('Cell')}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
+        <tbody>
+          {table.getRowModel().rows.map(row => (
+            <tr key={row.id}>
+              {row.getVisibleCells().map(cell => (
+                <td key={cell.id}>
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                </td>
+              ))}
+            </tr>
+          ))}
         </tbody>
       </table>
       <GameDetailsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title} homepage={homepage}>

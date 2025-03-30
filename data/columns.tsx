@@ -1,5 +1,5 @@
 'use client';
-import { Column, CellProps, UseSortByColumnOptions, Row } from "react-table";
+import { ColumnDef, SortingState } from "@tanstack/react-table";
 
 export interface IHref {
     txt: string,
@@ -17,4 +17,4 @@ export interface IGameData {
     langs: string[]
 };
 
-export type ExtendedColumn = Column<IGameData> & UseSortByColumnOptions<IGameData>;
+export type ExtendedColumn = ColumnDef<IGameData>;
