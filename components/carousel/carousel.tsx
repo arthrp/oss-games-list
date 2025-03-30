@@ -12,6 +12,11 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     setSelectedImage(image);
  };
 
+ const handleCloseClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSelectedImage(null);
+ };
+
  return (
     <div className={styles.wrapper}>
       {images.map((image, index) => (
@@ -24,13 +29,17 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         />
       ))}
       {selectedImage && (
-        <div className={styles.fullImageWrapper}>
-          <img
-            src={selectedImage}
-            alt="selected"
-            className="w-full h-full object-contain"
-            onClick={() => setSelectedImage(null)}
-          />
+        <div className={styles.fullImageWrapper} onClick={handleCloseClick}>
+          <div className={styles.fullImageContainer} onClick={(e) => e.stopPropagation()}>
+            <img
+              src={selectedImage}
+              alt="selected"
+              className={styles.fullImage}
+            />
+            <div className={styles.closeButton} onClick={handleCloseClick}>
+              X
+            </div>
+          </div>
         </div>
       )}
     </div>
