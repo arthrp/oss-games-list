@@ -1,0 +1,9 @@
+.footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgb(var(--foreground-rgb));
+  opacity: 0.8;
+  width: 100%;
+} 
