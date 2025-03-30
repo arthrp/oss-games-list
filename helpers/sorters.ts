@@ -2,6 +2,7 @@ import { IGameData } from "@/data/columns";
 
 //Add more date columns as required
 type DateColumns = "firstReleaseDate";
+type StringArrColumns = "genres" | "langs";
 
 export const dateSorter = (rowA: IGameData, rowB: IGameData, columnId: DateColumns) => {
     const dateA = new Date(getDateValue(rowA, columnId) as Date);
@@ -10,9 +11,9 @@ export const dateSorter = (rowA: IGameData, rowB: IGameData, columnId: DateColum
     return dateA.getTime() - dateB.getTime();
 }
 
-export const arraySorter = (rowA: IGameData, rowB: IGameData) => {
-    const arrA = rowA.genres;
-    const arrB = rowB.genres;
+export const arraySorter = (rowA: IGameData, rowB: IGameData, columnId: StringArrColumns) => {
+    const arrA = getStringArrayValue(rowA, columnId);
+    const arrB = getStringArrayValue(rowB, columnId);
 
     return arrA[0].localeCompare(arrB[0], 'en');
 }
@@ -25,4 +26,6 @@ export const caseInsensitiveAlphabeticalSorter = (rowA: IGameData, rowB: IGameDa
 };
 
 
-const getDateValue = <T extends DateColumns>(obj: IGameData, key: T): Date => obj[key];
+const getDateValue = (obj: IGameData, key: DateColumns): Date => obj[key];
+
+const getStringArrayValue = (obj: IGameData, key: StringArrColumns): string[] => obj[key];

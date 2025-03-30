@@ -52,7 +52,7 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
     columnHelper.accessor('genres', {
       header: 'Genre(s)',
       cell: info => <>{info.getValue().join(', ')}</>,
-      sortingFn: (rowA, rowB) => arraySorter(rowA.original, rowB.original)
+      sortingFn: (rowA, rowB) => arraySorter(rowA.original, rowB.original, 'genres')
     }),
     columnHelper.accessor('codeLicense', {
       header: 'Code license',
