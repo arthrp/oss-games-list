@@ -363,9 +363,18 @@
         "id": 41,
         "game": {"link": "https://wz2100.net/", "txt":"Warzone 2100", "screens": []},
         "firstReleaseDate": "2005-07-12",
-        "genres": ["RTS", "Strategy"],
+        "genres": ["Strategy", "RTS"],
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://github.com/Warzone2100/warzone2100",
         "langs": ["C++", "Javascript"]
+    },
+    {
+        "id": 42,
+        "game": {"link": "https://github.com/yairm210/Unciv", "txt":"Unciv", "screens": []},
+        "firstReleaseDate": "2017-11-19",
+        "genres": ["Strategy", "TBS"],
+        "codeLicense": "MPL-2.0",
+        "sourceLink": "https://github.com/yairm210/Unciv",
+        "langs": ["Kotlin"]
     }
 ]
