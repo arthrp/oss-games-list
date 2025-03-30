@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Open-source game list',
   description: 'Curated list of OSS games',
+  viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
 }
 
 export default function RootLayout({
