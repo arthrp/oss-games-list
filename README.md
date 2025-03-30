@@ -1,5 +1,5 @@
 # oss-games-list
-Static website that provides a curated list of open-source games
+Static website built with Next.js that provides a curated list of open-source games
 
 Launch with
 ```bash

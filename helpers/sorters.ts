@@ -5,8 +5,8 @@ type DateColumns = "firstReleaseDate";
 type StringArrColumns = "genres" | "langs";
 
 export const dateSorter = (rowA: IGameData, rowB: IGameData, columnId: DateColumns) => {
-    const dateA = new Date(getDateValue(rowA, columnId) as Date);
-    const dateB = new Date(getDateValue(rowB, columnId) as Date);
+    const dateA = new Date(getDateValue(rowA, columnId));
+    const dateB = new Date(getDateValue(rowB, columnId));
 
     return dateA.getTime() - dateB.getTime();
 }
