@@ -38,7 +38,7 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
             setIsModalOpen(true);
             setTitle(value.txt);
             setHomepage(value.link);
-            setScreenshots(value.screens.map(s => `img/${parseInt(info.row.original.id.toString(), 10)+1}/${s}`));
+            setScreenshots(value.screens.map(s => `img/${parseInt(info.row.original.id.toString(), 10)}/${s}`));
           }}>{value.txt}</a>
         );
       },
