@@ -8,11 +8,14 @@ describe('Header Component', () => {
     const homeLink = screen.getByText(/Home/i);
     const statLink = screen.getByText(/Statistics/i);
     const aboutLink = screen.getByText(/About/i);
+    const faqLink = screen.getByText(/FAQ/i);
 
     expect(homeLink).toBeInTheDocument();
     expect(aboutLink).toBeInTheDocument();
     expect(homeLink).toHaveAttribute('href', '/');
     expect(statLink).toHaveAttribute('href', '/statistics');
     expect(aboutLink).toHaveAttribute('href', '/about');
+    expect(faqLink).toBeInTheDocument();
+    expect(faqLink).toHaveAttribute('href', '/faq');
   });
 });

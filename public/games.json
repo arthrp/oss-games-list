@@ -219,7 +219,7 @@
         "id": 25,
         "game": {"link": "https://sourceforge.net/projects/btanks/", "txt":"Battle tanks", "screens": []},
         "firstReleaseDate": "2007-01-19",
-        "genres": ["Arcade"],
+        "genres": ["Action"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/whoozle/btanks",
         "langs": ["C++", "C"]
@@ -237,7 +237,7 @@
         "id": 27,
         "game": {"link": "https://trackballs.github.io/", "txt":"Trackballs", "screens": []},
         "firstReleaseDate": "2003-02-15",
-        "genres": ["Arcade"],
+        "genres": ["Action", "Platformer"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/trackballs/trackballs/",
         "langs": ["C++", "Scheme"]
@@ -246,7 +246,7 @@
         "id": 28,
         "game": {"link": "https://viewizard.com/", "txt":"Astromenace", "screens": []},
         "firstReleaseDate": "2007-02-20",
-        "genres": ["Arcade", "Scrolling shooter"],
+        "genres": ["Action", "Scrolling shooter"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/viewizard/astromenace",
         "langs": ["C++", "C"]
@@ -300,7 +300,7 @@
         "id": 34,
         "game": {"link": "https://endless-sky.github.io/", "txt":"Endless sky", "screens": []},
         "firstReleaseDate": "2014-01-26",
-        "genres": ["Sandbox", "Arcade"],
+        "genres": ["Sandbox", "Shoot 'em up"],
         "codeLicense": "GPL-3.0",
         "sourceLink": "https://github.com/endless-sky/endless-sky",
         "langs": ["C++"]
@@ -376,5 +376,23 @@
         "codeLicense": "MPL-2.0",
         "sourceLink": "https://github.com/yairm210/Unciv",
         "langs": ["Kotlin"]
+    },
+    {
+        "id": 43,
+        "game": {"link": "https://apps.kde.org/kgoldrunner/", "txt":"KGoldrunner", "screens": []},
+        "firstReleaseDate": "2002-03-30",
+        "genres": ["Platformer", "Puzzle"],
+        "codeLicense": "GPL-2.0-or-later",
+        "sourceLink": "https://invent.kde.org/games/kgoldrunner",
+        "langs": ["C++"]
+    },
+    {
+        "id": 44,
+        "game": {"link": "https://apps.kde.org/granatier/", "txt":"Granatier", "screens": []},
+        "firstReleaseDate": "2007-11-08",
+        "genres": ["Bomberman", "Action"],
+        "codeLicense": "GPL-2.0-or-later",
+        "sourceLink": "https://invent.kde.org/games/granatier",
+        "langs": ["C++"]
     }
 ]

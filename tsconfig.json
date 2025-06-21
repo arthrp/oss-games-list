@@ -16,7 +16,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "sourceMap": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "incremental": true,
     "types": [
       "@testing-library/jest-dom",
