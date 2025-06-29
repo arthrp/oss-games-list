@@ -60,7 +60,17 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
     }),
     columnHelper.accessor('genres', {
       header: 'Genre(s)',
-      cell: info => <>{info.getValue().join(', ')}</>,
+      cell: info => (
+        <div className="flex flex-wrap gap-1">
+          {info.getValue().map((genre: string) => (
+            <span
+              key={genre}
+              className="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+              {genre}
+            </span>
+          ))}
+        </div>
+      ),
       sortingFn: (rowA, rowB) => arraySorter(rowA.original, rowB.original, 'genres'),
       enableColumnFilter: true,
       filterFn: (row, columnId, value) => {
