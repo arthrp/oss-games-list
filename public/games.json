@@ -403,5 +403,14 @@
         "codeLicense": "AGPL-3.0-or-later",
         "sourceLink": "https://github.com/martin-t/rec-wars",
         "langs": ["Rust"]
+    },
+    {
+        "id": 46,
+        "game": {"link": "https://github.com/nevat/abbayedesmorts-gpl", "txt":"l'Abbaye des Morts", "screens": []},
+        "firstReleaseDate": "2013-08-11",
+        "genres": ["Action", "Platformer"],
+        "codeLicense": "GPL-3.0",
+        "sourceLink": "https://github.com/nevat/abbayedesmorts-gpl",
+        "langs": ["C"]
     }
 ]
