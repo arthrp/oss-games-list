@@ -219,7 +219,7 @@
         "id": 25,
         "game": {"link": "https://sourceforge.net/projects/btanks/", "txt":"Battle tanks", "screens": []},
         "firstReleaseDate": "2007-01-19",
-        "genres": ["Action"],
+        "genres": ["Action", "Tank shooter"],
         "codeLicense": "GPL-2.0",
         "sourceLink": "https://github.com/whoozle/btanks",
         "langs": ["C++", "C"]
@@ -394,5 +394,14 @@
         "codeLicense": "GPL-2.0-or-later",
         "sourceLink": "https://invent.kde.org/games/granatier",
         "langs": ["C++"]
+    },
+    {
+        "id": 45,
+        "game": {"link": "https://github.com/martin-t/rec-wars", "txt":"RecWars", "screens": []},
+        "firstReleaseDate": "2020-06-28",
+        "genres": ["Action", "Tank shooter"],
+        "codeLicense": "AGPL-3.0-or-later",
+        "sourceLink": "https://github.com/martin-t/rec-wars",
+        "langs": ["Rust"]
     }
 ]
