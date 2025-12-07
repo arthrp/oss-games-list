@@ -181,7 +181,7 @@ const GameTable = ({ data }: { data: IGameData[] }) => {
         </tbody>
       </table>
       <GameDetailsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title} homepage={homepage}>
-        <p>Status: playable</p>
+        <p>Homepage: <a href={homepage}>{homepage}</a></p>
         <p>Screenshots:</p>
         <Carousel images={screenshots} />
       </GameDetailsModal>

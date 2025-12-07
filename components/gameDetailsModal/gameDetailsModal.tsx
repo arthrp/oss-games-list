@@ -15,7 +15,7 @@ const GameDetailsModal: React.FC<ModalProps> = ({ isOpen, onClose, title, childr
   return (
     <div className={styles.modal}>
       <div className={styles.modalInner}>
-        <h3><a href={homepage}>{title}</a></h3>
+        <h3>{title}</h3>
         {children}
         <button onClick={onClose} className={styles.closeButton}>
           Close
