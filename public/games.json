@@ -415,11 +415,20 @@
     },
     {
         "id": 46,
-        "game": {"link": "https://anaseto.codeberg.page/games/shamogu/", "txt":"Shamogu", "screens": []},
+        "game": {"link": "https://anaseto.codeberg.page/games/shamogu/", "txt":"Shamogu", "screens": ["shamogu.jpeg"]},
         "firstReleaseDate": "2025-07-22",
         "genres": ["Action", "Roguelike", "Coffee-break rogulike"],
         "codeLicense": "ISC",
         "sourceLink": "https://codeberg.org/anaseto/shamogu",
-        "langs": ["C"]
+        "langs": ["Go"]
+    },
+    {
+        "id": 47,
+        "game": {"link": "https://codeberg.org/Wuzzy/Glitch", "txt":"Glitch", "screens": []},
+        "firstReleaseDate": "2022-11-03",
+        "genres": ["Action", "Platformer"],
+        "codeLicense": "GPL-3.0-or-later",
+        "sourceLink": "https://codeberg.org/Wuzzy/Glitch",
+        "langs": ["Lua"]
     }
 ]
