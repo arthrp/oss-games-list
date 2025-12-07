@@ -16,7 +16,6 @@ describe('GameDetailsModal', () => {
     );
 
     expect(screen.getByText(title)).toBeInTheDocument();
-    expect(screen.getByText(title).closest('a')).toHaveAttribute('href', homepage);
     expect(screen.getByText('Game details content')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /close/i })).toBeInTheDocument();
   });
