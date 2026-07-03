@@ -9,7 +9,7 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-const GameDetailsModal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, homepage }) => {
+const GameDetailsModal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, homepage: _homepage }) => {
   if (!isOpen) return null;
 
   return (

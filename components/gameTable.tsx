@@ -1,5 +1,5 @@
 'use client';
-import { ExtendedColumn, IGameData } from '@/data/columns';
+import { IGameData } from '@/data/columns';
 import React, { useState } from 'react';
 import { 
   useReactTable, 

@@ -1,5 +1,5 @@
 'use client';
-import { ColumnDef, SortingState } from "@tanstack/react-table";
+import { ColumnDef } from "@tanstack/react-table";
 
 export interface IHref {
     txt: string,

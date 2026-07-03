@@ -6,7 +6,7 @@
     "dev": "node minify.js && next dev",
     "build": "node minify.js && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "oxlint .",
     "test": "jest",
     "coverage": "jest --coverage --collectCoverageFrom='components/**/*.{ts,tsx}'"
   },
@@ -30,8 +30,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.22",
-    "eslint": "^9",
-    "eslint-config-next": "^16.0.4",
+    "oxlint": "^1.71.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
